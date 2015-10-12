@@ -2,23 +2,31 @@
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Carl Bernardo]]></title><description><![CDATA[Organically grown in Chicago, IL; Processed in Madison, WI;  Consumed in Richmond, VA; Recycled in Los Angeles, CA. 
 
 I make cool things at MakerSquare LA.
-]]></description><link>http://carlbernardo.github.io/</link><generator>Ghost 0.6</generator><lastBuildDate>Mon, 12 Oct 2015 02:14:38 GMT</lastBuildDate><atom:link href="http://carlbernardo.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up your Ghost + GitHub Pages blog]]></title><description><![CDATA[<p>If there's anything people who are just starting a blog have trouble with (including myself), it's exactly that — starting it. </p>
+]]></description><link>http://carlbernardo.github.io/</link><generator>Ghost 0.6</generator><lastBuildDate>Mon, 12 Oct 2015 02:19:28 GMT</lastBuildDate><atom:link href="http://carlbernardo.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up your Ghost + GitHub Pages blog]]></title><description><![CDATA[<p>If there's anything people who are just starting a blog have trouble with (including myself), it's exactly that — starting it. </p>
 
 <blockquote>
-  <p>How should I start my blog off? Should I do a series of posts? What do I honestly have to offer to any readers?</p>
+  <p>How should I start my blog off? </p>
+  
+  <p>Should I do a series of posts?</p>
+  
+  <p>What do I honestly have to offer to any readers?</p>
 </blockquote>
 
 <p>I'm sure you're familiar with the</p>]]></description><link>http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/</link><guid isPermaLink="false">5127c410-6324-4ccd-89b2-58f6f7788cf8</guid><dc:creator><![CDATA[Carl Bernardo]]></dc:creator><pubDate>Sun, 11 Oct 2015 20:04:09 GMT</pubDate><content:encoded><![CDATA[<p>If there's anything people who are just starting a blog have trouble with (including myself), it's exactly that — starting it. </p>
 
 <blockquote>
-  <p>How should I start my blog off? Should I do a series of posts? What do I honestly have to offer to any readers?</p>
+  <p>How should I start my blog off? </p>
+  
+  <p>Should I do a series of posts?</p>
+  
+  <p>What do I honestly have to offer to any readers?</p>
 </blockquote>
 
 <p>I'm sure you're familiar with the above. And as much as I would love to help with the crafting of your first posts, I'll have to leave that up to you. What I can do however, is help you get up and running on GitHub Pages using the Ghost blogging platform (<em>This is also my cop out first post; shhh....)</em>.</p>
 
 <p><strong>Let's get to it.</strong></p>
 
-<h4 id="basedonmyexperienceandotherpostsherearetheprereqs">Based on my experience and other posts, here are the prereqs:</h4>
+<h2 id="basedonmyexperienceandotherpostsherearetheprereqs">Based on my experience and other posts, here are the prereqs:</h2>
 
 <ul>
 <li><strong>Knowledge of Git</strong> (we'll be committing and pushing our blog via the terminal, so be comfortable with this workflow)</li>
@@ -30,7 +38,7 @@ I make cool things at MakerSquare LA.
 <li><strong>And a high tolerance for troubleshooting.</strong></li>
 </ul>
 
-<h4 id="1downloadghost">1. Download Ghost</h4>
+<h2 id="1downloadghost">1. Download Ghost</h2>
 
 <p>You can download Ghost by navigating <a href="https://ghost.org/download/">HERE</a>.</p>
 
@@ -57,7 +65,7 @@ I make cool things at MakerSquare LA.
 
 <p>Once everything's up to par and you've added some articles, it's almost time to push everything to GitHub pages, but before that, let's talk about Buster.</p>
 
-<h4 id="2downloadbuster">2. Download Buster</h4>
+<h2 id="2downloadbuster">2. Download Buster</h2>
 
 <p>You can find Buster documentation <a href="https://github.com/axitkhurana/buster">HERE</a>. Buster is a "Brute force static site generator for Ghost"... hence the name.</p>
 
@@ -70,9 +78,9 @@ $ pip install buster
 $ brew install wget
 </code></pre>
 
-<p>And that's it! Let's set up the repo.  </p>
+<p>And that's it! Let's set up the repo.</p>
 
-<h4 id="3createyourrepo">3. Create your repo</h4>
+<h2 id="3createyourrepo">3. Create your repo</h2>
 
 <p>Navigate to your GitHub account and create a public repo named <em>youraccountname.github.io</em> </p>
 
@@ -95,7 +103,7 @@ $ brew install wget
 <pre><code>$ buster generate --domain=http://localhost:2368/ghost
 </code></pre>
 
-<h4 id="4commitpush">4. Commit &amp; push</h4>
+<h2 id="4commitpush">4. Commit &amp; push</h2>
 
 <p>Navigate to the <em>'static'</em> directory:  </p>
 
@@ -119,7 +127,7 @@ $ git push
 
 <p>Keep refreshing, but until then you go Glen Coco!</p>
 
-<h4 id="5makingchanges">5. Making changes</h4>
+<h2 id="5makingchanges">5. Making changes</h2>
 
 <p>So there are a few posts out there that show you how to set up your blog, but I never really found an answer on what to do when you make a change or write a new post and want to push all these changes to your live website. So I thought I would write a bit about what I do. <em>Note: I'm not sure whether this is exactly the correct process or not, but it's been working for me. I'd love to know how you do it — just comment on this post below.</em></p>
 

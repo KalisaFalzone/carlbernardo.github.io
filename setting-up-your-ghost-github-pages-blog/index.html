@@ -32,20 +32,20 @@
 <meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png?v=wAAv6Wqe6l">
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml?v=wAAv6Wqe6l">
 <meta name="theme-color" content="#e74c3c">
-    <link rel="stylesheet" type="text/css" href="../assets/css/uno-zen.css?v=45b47c6ee2" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/uno-zen.css?v=c4c7ad019b" />
     <link rel="canonical" href="http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/" />
     
     <meta property="og:site_name" content="Carl Bernardo" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Setting up your Ghost + GitHub Pages blog" />
-    <meta property="og:description" content="If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off? Should I do a series of posts? What do I honestly have to..." />
+    <meta property="og:description" content="If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off?       Should I do a series of posts?      What do I honestly have to..." />
     <meta property="og:url" content="http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/" />
     <meta property="article:published_time" content="2015-10-11T20:04:09.336Z" />
-    <meta property="article:modified_time" content="2015-10-12T02:14:22.299Z" />
+    <meta property="article:modified_time" content="2015-10-12T02:19:14.907Z" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Setting up your Ghost + GitHub Pages blog" />
-    <meta name="twitter:description" content="If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off? Should I do a series of posts? What do I honestly have to..." />
+    <meta name="twitter:description" content="If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off?       Should I do a series of posts?      What do I honestly have to..." />
     <meta name="twitter:url" content="http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/" />
     
     <script type="application/ld+json">
@@ -63,8 +63,8 @@
     "headline": "Setting up your Ghost + GitHub Pages blog",
     "url": "http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/",
     "datePublished": "2015-10-11T20:04:09.336Z",
-    "dateModified": "2015-10-12T02:14:22.299Z",
-    "description": "If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off? Should I do a series of posts? What do I honestly have to..."
+    "dateModified": "2015-10-12T02:19:14.907Z",
+    "description": "If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off?       Should I do a series of posts?      What do I honestly have to..."
 }
     </script>
 
@@ -189,14 +189,18 @@ I make cool things at MakerSquare LA.
       <p>If there's anything people who are just starting a blog have trouble with (including myself), it's exactly that — starting it. </p>
 
 <blockquote>
-  <p>How should I start my blog off? Should I do a series of posts? What do I honestly have to offer to any readers?</p>
+  <p>How should I start my blog off? </p>
+  
+  <p>Should I do a series of posts?</p>
+  
+  <p>What do I honestly have to offer to any readers?</p>
 </blockquote>
 
 <p>I'm sure you're familiar with the above. And as much as I would love to help with the crafting of your first posts, I'll have to leave that up to you. What I can do however, is help you get up and running on GitHub Pages using the Ghost blogging platform (<em>This is also my cop out first post; shhh....)</em>.</p>
 
 <p><strong>Let's get to it.</strong></p>
 
-<h4 id="basedonmyexperienceandotherpostsherearetheprereqs">Based on my experience and other posts, here are the prereqs:</h4>
+<h2 id="basedonmyexperienceandotherpostsherearetheprereqs">Based on my experience and other posts, here are the prereqs:</h2>
 
 <ul>
 <li><strong>Knowledge of Git</strong> (we'll be committing and pushing our blog via the terminal, so be comfortable with this workflow)</li>
@@ -208,7 +212,7 @@ I make cool things at MakerSquare LA.
 <li><strong>And a high tolerance for troubleshooting.</strong></li>
 </ul>
 
-<h4 id="1downloadghost">1. Download Ghost</h4>
+<h2 id="1downloadghost">1. Download Ghost</h2>
 
 <p>You can download Ghost by navigating <a href="https://ghost.org/download/">HERE</a>.</p>
 
@@ -235,7 +239,7 @@ I make cool things at MakerSquare LA.
 
 <p>Once everything's up to par and you've added some articles, it's almost time to push everything to GitHub pages, but before that, let's talk about Buster.</p>
 
-<h4 id="2downloadbuster">2. Download Buster</h4>
+<h2 id="2downloadbuster">2. Download Buster</h2>
 
 <p>You can find Buster documentation <a href="https://github.com/axitkhurana/buster">HERE</a>. Buster is a "Brute force static site generator for Ghost"... hence the name.</p>
 
@@ -248,9 +252,9 @@ $ pip install buster
 $ brew install wget
 </code></pre>
 
-<p>And that's it! Let's set up the repo.  </p>
+<p>And that's it! Let's set up the repo.</p>
 
-<h4 id="3createyourrepo">3. Create your repo</h4>
+<h2 id="3createyourrepo">3. Create your repo</h2>
 
 <p>Navigate to your GitHub account and create a public repo named <em>youraccountname.github.io</em> </p>
 
@@ -273,7 +277,7 @@ $ brew install wget
 <pre><code>$ buster generate --domain=http://localhost:2368/ghost
 </code></pre>
 
-<h4 id="4commitpush">4. Commit &amp; push</h4>
+<h2 id="4commitpush">4. Commit &amp; push</h2>
 
 <p>Navigate to the <em>'static'</em> directory:  </p>
 
@@ -297,7 +301,7 @@ $ git push
 
 <p>Keep refreshing, but until then you go Glen Coco!</p>
 
-<h4 id="5makingchanges">5. Making changes</h4>
+<h2 id="5makingchanges">5. Making changes</h2>
 
 <p>So there are a few posts out there that show you how to set up your blog, but I never really found an answer on what to do when you make a change or write a new post and want to push all these changes to your live website. So I thought I would write a bit about what I do. <em>Note: I'm not sure whether this is exactly the correct process or not, but it's been working for me. I'd love to know how you do it — just comment on this post below.</em></p>
 
@@ -362,8 +366,8 @@ $ git push
 </footer>
       </section>
     </main>
-    <script src="../public/jquery.js?v=45b47c6ee2"></script> <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../assets/js/uno-zen.js?v=45b47c6ee2"></script>
+    <script src="../public/jquery.js?v=c4c7ad019b"></script> <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../assets/js/uno-zen.js?v=c4c7ad019b"></script>
     <script>
   if (window.ga_id) {
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
