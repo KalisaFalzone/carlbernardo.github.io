@@ -32,20 +32,20 @@
 <meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png?v=wAAv6Wqe6l">
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml?v=wAAv6Wqe6l">
 <meta name="theme-color" content="#e74c3c">
-    <link rel="stylesheet" type="text/css" href="../assets/css/uno-zen.css?v=81f4436776" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/uno-zen.css?v=45b47c6ee2" />
     <link rel="canonical" href="http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/" />
     
     <meta property="og:site_name" content="Carl Bernardo" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Setting up your Ghost + GitHub Pages blog" />
-    <meta property="og:description" content="If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it. As much as I would love to help with the crafting of your first posts, I&#x27;ll have to leave that..." />
+    <meta property="og:description" content="If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off? Should I do a series of posts? What do I honestly have to..." />
     <meta property="og:url" content="http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/" />
     <meta property="article:published_time" content="2015-10-11T20:04:09.336Z" />
-    <meta property="article:modified_time" content="2015-10-11T20:23:34.855Z" />
+    <meta property="article:modified_time" content="2015-10-12T02:14:22.299Z" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Setting up your Ghost + GitHub Pages blog" />
-    <meta name="twitter:description" content="If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it. As much as I would love to help with the crafting of your first posts, I&#x27;ll have to leave that..." />
+    <meta name="twitter:description" content="If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off? Should I do a series of posts? What do I honestly have to..." />
     <meta name="twitter:url" content="http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/" />
     
     <script type="application/ld+json">
@@ -63,8 +63,8 @@
     "headline": "Setting up your Ghost + GitHub Pages blog",
     "url": "http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/",
     "datePublished": "2015-10-11T20:04:09.336Z",
-    "dateModified": "2015-10-11T20:23:34.855Z",
-    "description": "If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it. As much as I would love to help with the crafting of your first posts, I&#x27;ll have to leave that..."
+    "dateModified": "2015-10-12T02:14:22.299Z",
+    "description": "If there&#x27;s anything people who are just starting a blog have trouble with (including myself), it&#x27;s exactly that — starting it.    How should I start my blog off? Should I do a series of posts? What do I honestly have to..."
 }
     </script>
 
@@ -186,20 +186,153 @@ I make cool things at MakerSquare LA.
     </header>
 
     <div id="post-content" class="post">
-      <p>If there's anything people who are just starting a blog have trouble with (including myself), it's exactly that — starting it. As much as I would love to help with the crafting of your first posts, I'll have to leave that up to you. </p>
+      <p>If there's anything people who are just starting a blog have trouble with (including myself), it's exactly that — starting it. </p>
 
-<p>What I can do however, is help you get up and running on GitHub Pages using the Ghost blogging platform. Let's get to it.</p>
+<blockquote>
+  <p>How should I start my blog off? Should I do a series of posts? What do I honestly have to offer to any readers?</p>
+</blockquote>
 
-<h4 id="whatyoullneed">What you'll need:</h4>
+<p>I'm sure you're familiar with the above. And as much as I would love to help with the crafting of your first posts, I'll have to leave that up to you. What I can do however, is help you get up and running on GitHub Pages using the Ghost blogging platform (<em>This is also my cop out first post; shhh....)</em>.</p>
+
+<p><strong>Let's get to it.</strong></p>
+
+<h4 id="basedonmyexperienceandotherpostsherearetheprereqs">Based on my experience and other posts, here are the prereqs:</h4>
 
 <ul>
-<li>A Ghost account and directory</li>
-<li>A GitHub account</li>
-<li>A couple of hours</li>
+<li><strong>Knowledge of Git</strong> (we'll be committing and pushing our blog via the terminal, so be comfortable with this workflow)</li>
+<li><strong>Some basic knowledge of GitHub</strong> (if you don't have an account, stop here and please sign up for an account <a href="http://127.0.0.1:2368/setting-up-your-ghost-github-pages-blog/github.com">HERE</a>)</li>
+<li><strong>A Ghost account</strong> (again, if you don't have one, stop here and sign up for one <a href="https://ghost.org/">HERE</a>)</li>
+<li><strong>Pip, a tool for installing Python Packages.</strong> To check whether you already have it installed, just type 'pip' in your terminal. If you have it installed, you'll see a bunch of options populate your terminal. If you need to install it, please go <a href="https://pip.pypa.io/en/stable/installing/#install-pip">HERE</a></li>
+<li><strong>Homebrew Package Manager, a package manager for OS X.</strong> To check whether you already have it installed, just type 'brew' in your terminal. If you have it installed, you'll see a bunch of options populate your terminal. If you need to install it, please go <a href="http://brew.sh/">HERE</a></li>
+<li><strong>npm, a package manager for Node.js</strong> (this comes with Node.js, but if you don't have it installed, please go <a href="https://nodejs.org/en/">HERE</a>). To check whether you already have it installed, just type 'npm' in your terminal.</li>
+<li><strong>And a high tolerance for troubleshooting.</strong></li>
 </ul>
 
-<p>Sources: <br />
-<a href="http://ledtechnica.com/free-ghost-hosting-on-github-pages/">LED Technica - Free Ghost Hosting on Github Pages</a></p>
+<h4 id="1downloadghost">1. Download Ghost</h4>
+
+<p>You can download Ghost by navigating <a href="https://ghost.org/download/">HERE</a>.</p>
+
+<p>When you finish downloading the zip file, extract it. We'll be dropping this ghost directory within another folder for reasons I'll explain later. For now, you can follow my example below (ignore the <em>static</em> directory and <em>wget-log</em>). <br />
+<img src="../content/images/2015/10/blogfilestructure.png" alt="Directory Structure" /></p>
+
+<p>You'll then want to navigate to the ghost directory in your terminal. In my example above, my directory is labeled <em>'ghost-0.6.4'</em>. </p>
+
+<p><em>From here on out, we'll be using our terminal. In all my examples, you'll see a <strong>$</strong> sign; you will be typing everything in yourself after that sign. The output / result will be dictated with a <strong>></strong> sign.</em></p>
+
+<p>When you're in the directory, you'll need to type:  </p>
+
+<pre><code>$ npm install
+</code></pre>
+
+<p>When Ghost has finished installing, type this to start the local server:  </p>
+
+<pre><code>$ npm start
+</code></pre>
+
+<p>Once Ghost starts locally, you'll notice you won't have access to your terminal as all the processes are being shown in real time. You can easily open another tab within your terminal before starting Ghost so you have one tab handling the requests, while the other is free to do other tasks.</p>
+
+<p>While Ghost is running locally, you'll want to navigate to <a href="http://localhost:2368/ghost">http://localhost:2368/ghost</a> to setup Ghost locally. You can use your current Ghost account or create a new one. At this point, you'll have access to Ghost's dashboard, which includes the basic Casper theme. Feel free to use this or a custom theme (just drop the theme in the <em>content/themes</em> directory and then select the new theme under settings). </p>
+
+<p>Once everything's up to par and you've added some articles, it's almost time to push everything to GitHub pages, but before that, let's talk about Buster.</p>
+
+<h4 id="2downloadbuster">2. Download Buster</h4>
+
+<p>You can find Buster documentation <a href="https://github.com/axitkhurana/buster">HERE</a>. Buster is a "Brute force static site generator for Ghost"... hence the name.</p>
+
+<p>Anyways, if you have everything in the prereqs, this should be super quick to do. Type the following in your terminal:  </p>
+
+<pre><code>// install buster
+$ pip install buster
+
+// required by buster
+$ brew install wget
+</code></pre>
+
+<p>And that's it! Let's set up the repo.  </p>
+
+<h4 id="3createyourrepo">3. Create your repo</h4>
+
+<p>Navigate to your GitHub account and create a public repo named <em>youraccountname.github.io</em> </p>
+
+<p>Here is an example using this website: <br />
+<img src="../content/images/2015/10/githubreponame.png" alt="GithubRepoName" /></p>
+
+<p>Do you remember earlier how I nested the <em>'ghost-0.6.4'</em> directory within a <em>'Blog'</em> folder? Well here's why: I want to keep the static files generated by buster separate from my Ghost files. Navigate to this folder now via your terminal. In my example, I'm navigating to <em>'Blog'</em> (the parent directory to my Ghost directory) using the file structure laid out at the top. </p>
+
+<p>From this directory, run:  </p>
+
+<pre><code>$ buster setup
+</code></pre>
+
+<p>And when prompted for a repo address, enter the HTTPS clone url (e.g. <a href="https://github.com/carlbernardo/carlbernardo.github.io.git">https://github.com/carlbernardo/carlbernardo.github.io.git</a>). You can find this link on your repo page on the right-hand side.</p>
+
+<p><img src="../content/images/2015/10/cloneURL.png" alt="" /></p>
+
+<p>Once you've finished the setup, you'll need to run the following to create files that will populate your static directory:  </p>
+
+<pre><code>$ buster generate --domain=http://localhost:2368/ghost
+</code></pre>
+
+<h4 id="4commitpush">4. Commit &amp; push</h4>
+
+<p>Navigate to the <em>'static'</em> directory:  </p>
+
+<pre><code>$ cd static
+
+// Remember I was in the parent folder 'Blog'
+// so I'm going one directory deep
+</code></pre>
+
+<p>It's time to stage the files and make your initial commit.  </p>
+
+<pre><code>// Add all files in 'static' directory and stage
+$ git add .
+$ git commit -m "Initial commit SWAG SWAG SWAG"
+
+//Upload to your repo
+$ git push
+</code></pre>
+
+<p>And that's it. It may take a few minutes for your repo to be live at your domain, <em>youraccountname.github.io</em>.</p>
+
+<p>Keep refreshing, but until then you go Glen Coco!</p>
+
+<h4 id="5makingchanges">5. Making changes</h4>
+
+<p>So there are a few posts out there that show you how to set up your blog, but I never really found an answer on what to do when you make a change or write a new post and want to push all these changes to your live website. So I thought I would write a bit about what I do. <em>Note: I'm not sure whether this is exactly the correct process or not, but it's been working for me. I'd love to know how you do it — just comment on this post below.</em></p>
+
+<p>I'll try and keep this short and sweet:</p>
+
+<ul>
+<li>Make your changes via the Ghost dashboard (e.g. <a href="http://localhost:2368/ghost">http://localhost:2368/ghost</a>) or direct code changes. </li>
+<li>Go to the <em>'Blog'</em> folder and regenerate the files in the static folder by:</li>
+</ul>
+
+<pre><code>$ buster generate --domain=http://localhost:2368/ghost
+</code></pre>
+
+<ul>
+<li>Navigate to the <em>'static'</em> directory:</li>
+</ul>
+
+<pre><code>$ cd static
+</code></pre>
+
+<ul>
+<li>Add, commit, push</li>
+</ul>
+
+<pre><code>$ git add .
+$ git commit -m "Second commit. Change social media icons"
+$ git push
+</code></pre>
+
+<p>And that's it. <em>This time I'm serious</em>.</p>
+
+<hr />
+
+<p>Shoutouts: <br />
+<a href="http://ledtechnica.com/free-ghost-hosting-on-github-pages/">LED Technica - Free Ghost Hosting on Github Pages</a> - <em>This was the most thorough walkthrough I used when I set my blog up. Thank you LED Technica!</em></p>
     </div>
 
     <div class="post related">
@@ -229,8 +362,8 @@ I make cool things at MakerSquare LA.
 </footer>
       </section>
     </main>
-    <script src="../public/jquery.js?v=81f4436776"></script> <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../assets/js/uno-zen.js?v=81f4436776"></script>
+    <script src="../public/jquery.js?v=45b47c6ee2"></script> <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../assets/js/uno-zen.js?v=45b47c6ee2"></script>
     <script>
   if (window.ga_id) {
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
