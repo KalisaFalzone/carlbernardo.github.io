@@ -2,7 +2,7 @@
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Carl Bernardo]]></title><description><![CDATA[Organically grown in Chicago, IL; Processed in Madison, WI;  Consumed in Richmond, VA; Recycled in Los Angeles, CA. 
 
 I make cool things at MakerSquare LA.
-]]></description><link>http://carlbernardo.github.io/</link><generator>Ghost 0.6</generator><lastBuildDate>Mon, 12 Oct 2015 02:42:47 GMT</lastBuildDate><atom:link href="http://carlbernardo.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up your Ghost + GitHub Pages blog]]></title><description><![CDATA[<p>If there's anything people who are just starting a blog have trouble with (including myself), it's exactly that — starting it. </p>
+]]></description><link>http://carlbernardo.github.io/</link><generator>Ghost 0.6</generator><lastBuildDate>Wed, 14 Oct 2015 17:09:22 GMT</lastBuildDate><atom:link href="http://carlbernardo.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up your Ghost + GitHub Pages blog]]></title><description><![CDATA[<p>If there's anything people who are just starting a blog have trouble with (including myself), it's exactly that — starting it. </p>
 
 <blockquote>
   <p>How should I start my blog off? </p>
@@ -24,19 +24,20 @@ I make cool things at MakerSquare LA.
 
 <p>I'm sure you're familiar with the above. And as much as I would love to help with the crafting of your first posts, I'll have to leave that up to you. What I can do however, is help you get up and running on GitHub Pages using the Ghost blogging platform (<em>This is also my cop out first post; shhh....)</em>.</p>
 
-<p><strong>Let's get to it.</strong></p>
-
 <h2 id="basedonmyexperienceandotherpostsherearetheprereqs">Based on my experience and other posts, here are the prereqs:</h2>
 
 <ul>
 <li><strong>Knowledge of Git</strong> (we'll be committing and pushing our blog via the terminal, so be comfortable with this workflow)</li>
 <li><strong>Some basic knowledge of GitHub</strong> (if you don't have an account, stop here and please sign up for an account <a href="http://carlbernardo.github.io/setting-up-your-ghost-github-pages-blog/github.com">HERE</a>)</li>
-<li><strong>A Ghost account</strong> (again, if you don't have one, stop here and sign up for one <a href="https://ghost.org/">HERE</a>)</li>
+<li><strong>Xcode.</strong> You'll run into errors when trying to install Ghost if you don't have this. Trust me.</li>
 <li><strong>Pip, a tool for installing Python Packages.</strong> To check whether you already have it installed, just type 'pip' in your terminal. If you have it installed, you'll see a bunch of options populate your terminal. If you need to install it, please go <a href="https://pip.pypa.io/en/stable/installing/#install-pip">HERE</a></li>
 <li><strong>Homebrew Package Manager, a package manager for OS X.</strong> To check whether you already have it installed, just type 'brew' in your terminal. If you have it installed, you'll see a bunch of options populate your terminal. If you need to install it, please go <a href="http://brew.sh/">HERE</a></li>
-<li><strong>npm, a package manager for Node.js</strong> (this comes with Node.js, but if you don't have it installed, please go <a href="https://nodejs.org/en/">HERE</a>). To check whether you already have it installed, just type 'npm' in your terminal.</li>
-<li><strong>And a high tolerance for troubleshooting.</strong></li>
+<li><strong>Node.js.</strong> The folks at Ghost recommend v0.10.4. If you need to revert to an older version, try using n, Node.js version manager. You can find more information about it <a href="https://www.npmjs.com/package/n">HERE</a></li>
+<li><strong>npm, a package manager for Node.js.</strong> The folks at Ghost recommend v1.4.21. To check whether you already have it installed, just type 'npm' in your terminal.</li>
+<li><strong>And a very high tolerance for troubleshooting.</strong> I've assisted a ton of my friends trying to get their blogs up using Ghost and GitHub pages and it still takes me a while since everyone has different development environments.</li>
 </ul>
+
+<p><strong>Anyways, Let's get to it.</strong></p>
 
 <h2 id="1downloadghost">1. Download Ghost</h2>
 
@@ -49,9 +50,15 @@ I make cool things at MakerSquare LA.
 
 <p><em>From here on out, we'll be using our terminal. In all my examples, you'll see a <strong>$</strong> sign; you will be typing everything in yourself after that sign. The output / result will be dictated with a <strong>></strong> sign.</em></p>
 
-<p>When you're in the directory, you'll need to type:  </p>
+<p>Ensure you have the recommended version of Node.js.  </p>
 
-<pre><code>$ npm install
+<pre><code>$ node -v
+&gt; v0.10.4
+</code></pre>
+
+<p>When you're in the Ghost directory (mine is <em>'ghost-0.6.4'</em>), type:  </p>
+
+<pre><code>$ npm install --production
 </code></pre>
 
 <p>When Ghost has finished installing, type this to start the local server:  </p>
@@ -61,7 +68,7 @@ I make cool things at MakerSquare LA.
 
 <p>Once Ghost starts locally, you'll notice you won't have access to your terminal as all the processes are being shown in real time. You can easily open another tab within your terminal before starting Ghost so you have one tab handling the requests, while the other is free to do other tasks.</p>
 
-<p>While Ghost is running locally, you'll want to navigate to <a href="http://localhost:2368/ghost">http://localhost:2368/ghost</a> to setup Ghost locally. You can use your current Ghost account or create a new one. At this point, you'll have access to Ghost's dashboard, which includes the basic Casper theme. Feel free to use this or a custom theme (just drop the theme in the <em>content/themes</em> directory and then select the new theme under settings). </p>
+<p>While Ghost is running locally, you'll want to navigate to <a href="http://localhost:2368/ghost">http://localhost:2368/ghost</a> for the initial setup. You can use your current Ghost account or create a new one. At this point, you'll have access to Ghost's dashboard, which includes the basic Casper theme. Feel free to use this or a custom theme (just drop the theme in the <em>content/themes</em> directory and then select the new theme under settings).</p>
 
 <p>Once everything's up to par and you've added some articles, it's almost time to push everything to GitHub pages, but before that, let's talk about Buster.</p>
 
@@ -87,7 +94,20 @@ $ brew install wget
 <p>Here is an example using this website: <br>
 <img src="http://carlbernardo.github.io/content/images/2015/10/githubreponame.png" alt="GithubRepoName"></p>
 
-<p>Do you remember earlier how I nested the <em>'ghost-0.6.4'</em> directory within a <em>'Blog'</em> folder? Well here's why: I want to keep the static files generated by buster separate from my Ghost files. Navigate to this folder now via your terminal. In my example, I'm navigating to <em>'Blog'</em> (the parent directory to my Ghost directory) using the file structure laid out at the top. </p>
+<p><strong>WARNING: I cannot stress this enough. You MUST name your website after your GitHub username or your website will not work  i.e. my GitHub username is "carlbernardo", so my website must be "carlbernardo.github.io".</strong></p>
+
+<p>Once you've created your repo, you'll need to navigate to your <em>'config.js'</em> file located in your ghost directory (again, mine is <em>'ghost-0.6.4'</em>). In this file, you'll need to change the URL in the Production area to the URL you just set up: <em>youraccountname.github.io</em></p>
+
+<pre><code>// ### Production
+// When running Ghost in the wild, use the production environment
+// Configure your URL and mail settings here
+    production: {
+        url: 'http://youraccountname.github.io/',
+
+        //    ^^ THIS IS WHAT YOU CHANGE ^^
+</code></pre>
+
+<p>Anyways, do you remember earlier how I nested the <em>'ghost-0.6.4'</em> directory within a <em>'Blog'</em> folder? Well here's why: I want to keep the static files generated by buster separate from my Ghost files. Navigate to this folder now via your terminal. In my example, I'm navigating to <em>'Blog'</em> (the parent directory to my Ghost directory) using the file structure laid out at the top. </p>
 
 <p>From this directory, run:  </p>
 
@@ -98,7 +118,7 @@ $ brew install wget
 
 <p>Once you've finished the setup, you'll need to run the following to create files that will populate your static directory:  </p>
 
-<pre><code>$ buster generate --domain=http://localhost:2368/ghost
+<pre><code>$ buster generate --domain=http://localhost:2368
 </code></pre>
 
 <h2 id="4commitpush">4. Commit &amp; push</h2>
@@ -136,7 +156,7 @@ $ git push
 <li>Go to the <em>'Blog'</em> folder and regenerate the files in the static folder by:</li>
 </ul>
 
-<pre><code>$ buster generate --domain=http://localhost:2368/ghost
+<pre><code>$ buster generate --domain=http://localhost:2368
 </code></pre>
 
 <ul>
