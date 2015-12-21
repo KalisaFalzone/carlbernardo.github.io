@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>You&#x27;ve been accepted to Hack Reactor or MakerSquare. Now what?</title>
+    <title>Scaling your D3 Data</title>
     <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,20 +33,20 @@
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml?v=wAAv6Wqe6l">
 <meta name="theme-color" content="#e74c3c">
     <link rel="stylesheet" type="text/css" href="../assets/css/uno-zen.css?v=3bda47a473" />
-    <link rel="canonical" href="http://carlbernardo.github.io/youve-been-accepted-to-hack-reactor-or-makersquare-now-what/" />
+    <link rel="canonical" href="http://carlbernardo.github.io/scaling-your-d3-data/" />
     
     <meta property="og:site_name" content="Carl Bernardo" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="You&#x27;ve been accepted to Hack Reactor or MakerSquare. Now what?" />
-    <meta property="og:description" content="So you&#x27;ve received your acceptance email from a Hack Reactor Core School and you have a few weeks before your start date.  If you&#x27;re more than a month out from your start date, I&#x27;m sure you&#x27;re not even thinking about..." />
-    <meta property="og:url" content="http://carlbernardo.github.io/youve-been-accepted-to-hack-reactor-or-makersquare-now-what/" />
-    <meta property="article:published_time" content="2015-11-28T21:06:18.325Z" />
-    <meta property="article:modified_time" content="2015-11-28T21:06:18.323Z" />
+    <meta property="og:title" content="Scaling your D3 Data" />
+    <meta property="og:description" content="Let me preface this post by saying Scott Murray&#x27;s post on Scaling from his blog, Aligned Left, does the subject a bit more justice than this post. In fact, I used his post to understand scales to finish a D3..." />
+    <meta property="og:url" content="http://carlbernardo.github.io/scaling-your-d3-data/" />
+    <meta property="article:published_time" content="2015-12-21T13:40:43.958Z" />
+    <meta property="article:modified_time" content="2015-12-21T13:40:43.956Z" />
     
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="You&#x27;ve been accepted to Hack Reactor or MakerSquare. Now what?" />
-    <meta name="twitter:description" content="So you&#x27;ve received your acceptance email from a Hack Reactor Core School and you have a few weeks before your start date.  If you&#x27;re more than a month out from your start date, I&#x27;m sure you&#x27;re not even thinking about..." />
-    <meta name="twitter:url" content="http://carlbernardo.github.io/youve-been-accepted-to-hack-reactor-or-makersquare-now-what/" />
+    <meta name="twitter:title" content="Scaling your D3 Data" />
+    <meta name="twitter:description" content="Let me preface this post by saying Scott Murray&#x27;s post on Scaling from his blog, Aligned Left, does the subject a bit more justice than this post. In fact, I used his post to understand scales to finish a D3..." />
+    <meta name="twitter:url" content="http://carlbernardo.github.io/scaling-your-d3-data/" />
     
     <script type="application/ld+json">
 {
@@ -60,11 +60,11 @@
         "sameAs": null,
         "description": null
     },
-    "headline": "You&#x27;ve been accepted to Hack Reactor or MakerSquare. Now what?",
-    "url": "http://carlbernardo.github.io/youve-been-accepted-to-hack-reactor-or-makersquare-now-what/",
-    "datePublished": "2015-11-28T21:06:18.325Z",
-    "dateModified": "2015-11-28T21:06:18.323Z",
-    "description": "So you&#x27;ve received your acceptance email from a Hack Reactor Core School and you have a few weeks before your start date.  If you&#x27;re more than a month out from your start date, I&#x27;m sure you&#x27;re not even thinking about..."
+    "headline": "Scaling your D3 Data",
+    "url": "http://carlbernardo.github.io/scaling-your-d3-data/",
+    "datePublished": "2015-12-21T13:40:43.958Z",
+    "dateModified": "2015-12-21T13:40:43.956Z",
+    "description": "Let me preface this post by saying Scott Murray&#x27;s post on Scaling from his blog, Aligned Left, does the subject a bit more justice than this post. In fact, I used his post to understand scales to finish a D3..."
 }
     </script>
 
@@ -163,74 +163,115 @@ I make cool things at MakerSquare LA.
   <article class="post">
     <header>
       <div class="post meta">
-        <time datetime="28 Nov 2015">28 Nov 2015</time>
+        <time datetime="21 Dec 2015">21 Dec 2015</time>
         <span class="post tags"></span>
 
 
         <span class="post reading-time"> ~ <span></span> read.</span>
       </div>
 
-      <a alt="Tweet 'You&#x27;ve been accepted to Hack Reactor or MakerSquare. Now what?'" rel="me"
-        href="javascript:window.open('http://twitter.com/share?hashtags=&text=You&#x27;ve been accepted to Hack Reactor or MakerSquare. Now what? » ', '_blank', 'width=400,height=500');void(0);">
+      <a alt="Tweet 'Scaling your D3 Data'" rel="me"
+        href="javascript:window.open('http://twitter.com/share?hashtags=&text=Scaling your D3 Data » ', '_blank', 'width=400,height=500');void(0);">
         
-        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">You&#x27;ve been accepted to Hack Reactor or MakerSquare. Now what?</h1>
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">Scaling your D3 Data</h1>
       </a>
     </header>
 
     <div id="post-content" class="post">
-      <p><em>So you've received your acceptance email from a Hack Reactor Core School and you have a few weeks before your start date.</em> </p>
+      <p>Let me preface this post by saying <a href="http://alignedleft.com/tutorials/d3/scales">Scott Murray's post on <em>Scaling</em></a> from his blog, <a href="http://alignedleft.com/">Aligned Left</a>, does the subject a bit more justice than this post. In fact, I used his post to understand scales to finish a D3 project I was working on. That said, if you want a quick explanation using my project as an example, continue reading.</p>
 
-<p><em>If you're more than a month out from your start date, I'm sure you're not even thinking about studying or finishing the prework just yet. If you're a few weeks out from your start date, you're probably thinking you have plenty of time to finish the prework and to study whatever you'd like before your cohort starts. And if you start next week, I'm sure prework is the only thing on your mind right now.</em></p>
-
-<p>In this post, I hope to give you a basic list on what to study before starting your immersive experience.</p>
+<p>Let's first talk about what <em>scales</em> are.</p>
 
 <blockquote>
-  <p><em>"Truly great creative achievement require hundreds, if not thousands, of hours of work, and we have to make time every single day to put in those hours."</em></p>
+  <p>Scales are functions that map from an input domain to an output range.</p>
 </blockquote>
 
-<p>I have no doubt that you'll break hundreds of hours of coding and studying during your time at a Hack Reactor Core School. However, my job is to get you into that habit earlier with this list and therefore, get you into the <em>thousands of hours of work</em> <strong>sooner</strong>.</p>
+<p>Let me repeat that in case you didn't get that. <strong>Input Domain</strong> to an <strong>Output Range</strong>. This means that the domain of the dataset you input, will be outputted to a normalized range you specify. </p>
 
-<p>Familiarity with the following before you start will make all the difference. </p>
+<p><img src="../content/images/2015/12/ProgrammingLanguages.png" alt="Programming Languages: Job Occurrences vs. Avg. Salary" /></p>
 
-<h2 id="whattostudy">What to study</h2>
+<p>Above, you'll find a D3 project I worked on using data from the <a href="http://trendyskills.com/api">Trendy Skills API</a> to graph programming language occurrencies on Trendy Skills (popularity) vs. Average Yearly Salary. We'll be walking through how I scaled the Average Yearly Salary to fit nicely on the y-axis.</p>
 
-<p>Let me preface this part by saying <strong>finish your prework before even looking at this list.</strong> There's a reason they assign it and require that you finish it before starting. </p>
+<h2 id="thedata">The Data</h2>
 
-<p>Now for the resources.</p>
+<p><strong>Average Yearly Salary - Raw Data</strong></p>
 
-<p><strong>Know this:</strong></p>
+<pre><code>var avgSalary = [80331.13816332279, 64048.22617049916, 75811.31883208721, 65281.71257122926, 70178.37703874212, 72835.88428124922, 67268.6801932954, 69087.79809839057, 91752.59932125654, 71494.96067160195];  
+</code></pre>
 
-<ul>
-<li><a href="https://github.com/getify/You-Dont-Know-JS">JavaScript</a> - This should go without saying. I know you can't know the language inside out by the time you start (I mean part of the reason why you're going through an immersive program is to learn this), but the more you know about the little quirks of the language, the better position you'll be in to tackle the challenges in the program. I recommend reading through Kyle Simpson's book series YDKJS.</li>
-<li><a href="https://www.youtube.com/playlist?list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P">Data Structures</a> - What's a data structure? It's a way data can be organized so it can be used more efficiently. Spend time learning what Stacks, Queues, Linked Lists, Trees, Graphs, and Hash Tables are.</li>
-<li><a href="https://www.youtube.com/playlist?list=PL2_aWCzGMAwI9HK8YPVBjElbLbI3ufctn">Time Complexity</a> - This will come up time and time again not only in the program, but also in technical interviews. Spend the time to familiarize yourself with this as soon as you can. Know what Big O notation is and articulating a runtime for a certain algorithm.</li>
-<li><a href="https://www.youtube.com/playlist?list=PL2_aWCzGMAwKedT2KfDMB9YA5DgASZb3U">Sorting Algorithms</a> - Speaking of algorithms, know the different types of sorting algorithms out there as well as the time complexity for each. </li>
-</ul>
+<p>As you can tell from the graph above and the dataset, the average yearly salary for a C developer vs. a PHP developer vs. a JavaScript or Java developer varies greatly. Our goal is to get this wide domain of data within a reasonable range for our svg. Since we plan on fitting this data on the y-axis of our svg, <strong>we're only concerned with the height of our svg, which is currently set to 768 pixels.</strong></p>
 
-<p><strong>Sign up for this:</strong></p>
+<p>I'm sure the first thing you'll notice (other than the place value accuracy) is probably the domain we're working with. Using the Math.min() and Math.max(), we can easily grab the domain we'll be working with.</p>
 
-<ul>
-<li><a href="https://leetcode.com/">Leetcode</a> - A great resource to practice coding challenges. </li>
-<li><a href="http://frontenddevweekly.com/">Frontend Dev Weekly</a></li>
-<li><a href="http://javascriptweekly.com/">JavaScript Weekly</a></li>
-<li><a href="http://nodeweekly.com/">Node Weekly</a></li>
-</ul>
+<pre><code>Math.min.apply(null, avgSalary); // 91752.59932125654  
+Math.max.apply(null, avgSalary); // 64048.22617049916  
+</code></pre>
 
-<p><strong>Buy this:</strong></p>
+<p>Now that we have the domain, we can start creating a scale using D3's built in scale methods. Below is the <strong>final</strong> scaling function.</p>
 
-<ul>
-<li><a href="http://www.amazon.com/Cracking-Coding-Interview-6th-Programming/dp/0984782850/ref=sr_1_1?ie=UTF8&amp;qid=1448734265&amp;sr=8-1&amp;keywords=cracking+the+code">Cracking The Coding Interview by Gayle Laakmann McDowell</a> - This will not only come in handy when you finish the program and are interviewing, but there's also some great explanations in the earlier chapters on time complexity.</li>
-</ul>
+<pre><code>var yScale = d3.scale.linear()  
+  .domain([60000, 95000])
+  .range([768, 0]);
+</code></pre>
+
+<p>We start by telling D3 what kind of scale we want, in this example, linear.  </p>
+
+<pre><code>var yScale = d3.scale.linear()  
+</code></pre>
+
+<p>We then chain our function and set the domain.</p>
+
+<pre><code>  .domain([60000, 90000])
+
+// .domain() accepts a tuple with a min / max value.
+// I rounded $64,048 down to $60,000 and $91,752 up to $95,000,
+</code></pre>
+
+<p>Finally, we tell D3 the range we want it to create using our domain above. We're essentially telling D3 "take the domain above and graph it using this scale".</p>
+
+<pre><code>  .range([768, 0]);
+
+// .range() accepts a tuple with a min, max value.
+// One thing you'll notice here is that we seemed to have 'switched' our values.
+// i.e. why is it [768, 0] vs. [0, 768]?
+</code></pre>
+
+<p>The reason why we do this is because we want our data to function like a quadrant 1 graph (x increases as you go 'right' and y increases as you go 'up'). <strong>If we used [0, 768], our graph would be inverted (x increases as you go 'right' and y increases as you go 'down').</strong></p>
+
+<p>Because D3's scale functions return a function, we can now invoke this function on our data. Below is the code I used to plot these points.</p>
+
+<pre><code>circles.enter()  
+  .append("circle")
+  .attr({
+    "cx": function(d, i){
+      return xScale(d.countOccurencies);
+    },
+    "cy": function(d, i){
+      return yScale(d.averageSalary); // uses our yScale function
+    },
+    "r": 5
+  })
+  .attr("fill", "#03aa88");
+</code></pre>
+
+<p>Although linear scale is the most popular way to scale your data, there are a handful of other scales such as <em>identity, power, logarithmic, quantize, quantile, etc.</em> You can read more about them <a href="https://github.com/mbostock/d3/wiki/Quantitative-Scales">here</a>. Oh, and don't forget <a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales">Ordinal Scales</a> and <a href="https://github.com/mbostock/d3/wiki/Time-Scales">Time Scales</a>!</p>
+
+<p>And last but not least, another D3 project, which queries the <a href="https://github.com/justintv/Twitch-API">Twitch API</a> and graphs current viewers based on game. This project uses D3's power scale.</p>
+
+<p><img src="../content/images/2015/12/TwitchGif120915_738amPST.gif" alt="" /></p>
 
 <hr />
 
-<p>If you found any other resource helpful, feel free to reach out and I will update this list for future students.</p>
+<h6 id="shoutouts">Shoutouts:</h6>
+
+<h6 id="scottmurrayonscaleshttpalignedleftcomtutorialsd3scalesthisguysblogpostsareanexcellenttoolford3tutorials"><a href="http://alignedleft.com/tutorials/d3/scales">Scott Murray on Scales</a> - <em>This guy's blog posts are an excellent tool for D3 tutorials.</em></h6>
+
+<h6 id="javascriptjohnhttpsjavascriptjohnwordpresscommypairprogrammingpartnerforthesed3projects"><a href="https://javascriptjohn.wordpress.com/">JavaScript John</a> - <em>My pair programming partner for these D3 projects.</em></h6>
     </div>
 
     <div class="post related">
-        <a rel="prev" id="prev-btn" class="btn small square" href="../atom-vs-sublime/index.html">← The text editor you&#x27;ve always wanted vs. the text editor you&#x27;ll fall in love with. Which one I fell for and why.</a>
+        <a rel="prev" id="prev-btn" class="btn small square" href="../youve-been-accepted-to-hack-reactor-or-makersquare-now-what/index.html">← You&#x27;ve been accepted to Hack Reactor or MakerSquare. Now what?</a>
 
-        <a rel="next" id="next-btn" class="btn small square" href="../scaling-your-d3-data/index.html">Scaling your D3 Data →</a>
     </div>
 
     <footer class="post comments">
